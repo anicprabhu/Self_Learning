@@ -1,0 +1,115 @@
+ISTIO LAB
+
+docker run hello-world
+
+kubectl version --short
+
+kubectl get nodes
+
+minikube start
+
+Download	and	Deploy	Istio	Resources
+
+	1.	Download	Istio
+
+		curl -L https://git.io/getLatestIstio | ISTIO_VERSION=1.1.7 sh -
+
+	2.	Familiarize	with	`istioctl`
+		
+		istioctl version
+
+	3.	Install	Istio	custom	resources
+		
+		for i in install/kubernetes/helm/istio-init/files/crd*yaml;
+			do kubectl apply -f $i; done
+
+	4.	Verify	custom	resource	installation
+		
+		kubectl get crd | grep istio
+
+Deploy	Istio
+
+	1.	Install	Istio
+
+			kubectl apply -f install/kubernetes/istio-demo.yaml
+
+	2.	Find	control	plane	namespace
+
+			kubectl get namespaces
+
+	3.	Inspect	control	plane	services
+
+			kubectl get svc -n istio-system
+
+	4.	Inspect	control	plane	components
+
+			kubectl get pod -n istio-system
+
+Deploy	Sample	App
+
+	kubectl label namespace default istio-injection=enabled
+
+	kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml
+
+		or kubectl apply -f <(istioctl kube-inject -f samples/bookinfo/platform/kube/bookinfo.yaml)
+
+	kubectl get services
+
+	kubectl get pods
+
+	kubectl exec -it $(kubectl get pod -l app=ratings -o jsonpath='{.items[0].metadata.name}') -c ratings -- curl productpage:9080/productpage | grep -o "<title>.*</title>"
+
+
+
+Determine the ingress IP and port
+
+	kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
+
+	kubectl get gateway
+
+	kubectl get svc istio-ingressgateway -n istio-system
+
+	
+
+
+
+	kubectl get nodes
+
+	kubectl get pods --all-namespaces
+
+	kubectl cluster-info
+
+	k get pods
+
+	k get namespace 
+
+	k get namespace -n istio-system
+
+	k get pods
+
+	k describe pod *name*  -should two containers - main and proxy
+
+
+
+istioctl version --short
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
