@@ -1,0 +1,7 @@
+https://kousenit.org/
+
+https://kenkousen.substack.com/
+
+https://github.com/kousen/spring-and-spring-boot
+
+Lab Manual: http://www.kousenit.com/springboot/

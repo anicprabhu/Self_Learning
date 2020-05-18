@@ -1,2 +1,0 @@
-Src
-https://github.com/layer5io/istio-service-mesh-workshop/blob/master/lab-1/README.md

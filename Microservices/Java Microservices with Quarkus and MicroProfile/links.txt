@@ -1,0 +1,7 @@
+SOurce
+https://github.com/jclingan/oreilly-microprofile-tutorial
+
+Course
+https://learning.oreilly.com/live-training/courses/java-microservices-with-quarkus-and-microprofile/0636920378327/
+
+
