@@ -1,0 +1,203 @@
+Ableton
+
+CTRL + E ................ Split Clip at Selection (Point or Area)
+
+CTRL + D ................ Duplicate (Clip or Selected Area)
+
+CTRL + J ................ Consolidate Selection into Clip
+
+CTRL + G ................. Group Tracks / Add selected device to Instrument Rack
+
+CTRL + L .................. Loop Selection
+
+CTRL + I ................. Insert Silence
+
+CTRL + U .................. Quantize
+
+CTRL + R .................. Rename
+
+CTRL + T .................. New Audio Track
+
+CTRL + SHIFT + T .......... New MIDI Tracks
+
+CTRL + ALT + T ............ New Return Track
+
+CTRL + 1 ................. Increase Grid
+
+CTRL + 2 ................. Decrease Grid
+
+CTRL + 3 .................. Triplet Grid
+
+CTRL + 4 .................. Snap To Grid
+
+CTRL + 5 .................. Fixed Grid
+
+CTRL + F .................. Access Browser Search
+
+Space...................... Stop
+
+CTRL + Space............... Play selection
+
+Shift + Space.............. Play from stop
+
+Ctrl + , ........... ...... Preferences
+
+DEL ....................... Restore the setting to default
+
+- …………………… Minimize the selected effect
+
++ ………………… ….     Maximize the selected effect
+
+
+CTRL + Shift + F ........ Scroll Display to Follow Playback
+
+CTRL + Shift + M ........ Create MIDI Clip of Selected Duration
+
+CTRL + Shift + U .......... Quantize Settings
+
+CTRL + Shift + W .......... Show Second Window
+
+CTRL +Shift + Delete ........ Delete Time
+
+ALT + unfold button ...... Unfold all Tracks
+
+Z…. Zoom to selection
+
+SHIFT + Z…. Zoom out back to previous zoom level
+
+R…………. Reverse Clip
+
+0 … deactivate  selection within the clip
+
+Shift + drag the edge of the clip……………… time stretch the clip
+
+Shift + Arrangement Record ........... wait till first clip is triggered
+
+Shift + Click Multiple Clips in session View............. Edit Multiple Clips (Common Properties) at the same time
+
+Shift + Click Multiple Clips in arrangement View............. Create area selection
+
+Shift + Tab - To toggle between Device and Clip View
+
+--   …. Zoom Out
+
+ + …. Zoom IN
+
+
+CTRL + Scroll …….Zoom In Out
+
+Shift + Scroll …….. Horizontal Scroll
+
+Alt + Scroll ……… Adjust Track Height
+
+CTRL + ALT+ Drag……. Scroll Display
+
+CTRL + ALT + drag........ Pan the selection
+
+SHIFT + CTRL + Drag…….  Slide Waveform
+
+CTRL + Left Arrow  ……. Go to beginning of the clip on selected track
+
+
+CTRL + ALT + B ............ Show / Hide Browser
+
+CTRL + ALT + L ............. Show / Hide Detailed View
+
+CTRL + ALT + F ......... Create Fade/Crossfade
+
+
+Alt + Move the edge of note is Clip View / Move the note ............. disable snapping
+
+ALT + drag note up / Down...... Change the velocity of the note
+
+Select loop -> CTRL + D ........... Duplicate Loop
+
+Envelopes
+
+	Click To create Point / Double Click To remove Point
+
+	Points Snap to the grid, Change the grid for finer snapping
+
+	CTRL + move a point - Only Vertical Point Movement
+
+	ALT + Move the line - To Create a Curve Envelope
+
+	Rt Click a track -> Add Lane for each Automated Envelope
+
+	B ----- Manually draw envelope relative the grid size chosen
+
+	ALT + Use draw tool - Disables the Grid temporarily
+
+	Select the region with Envelope - A - Get in Automation Mode
+
+		Cut Envelope......... CTRL + X
+
+		Copy Envelope........ CTRL +  C.......... TO paste at any location. CTRL + V
+
+		Duplicate Envelope... CTRL +  D
+
+		Delete Envelope...... CTRL + Del
+
+MIDI Editor
+
+	Page up / Page Down ..... Scroll Vertically
+	
+	CTRL + Scroll ………….. Scroll Horizontally
+
+	CTRL + page Up / CTRL + Page Down ...... Scroll Horizontally 
+
+	CTRL + Mouse wheel ........... Scroll Horizontally	
+
+	SHIFT + Click .... Select Multiple Notes
+
+	ALT + Drag on Note - Increase / Decrease Velocity
+
+	0 .......... Mute selected Notes
+
+	CTRL + Right / Left arrow ......... Select Prev / Next Same Note
+
+	CTRL + Up / Down Arrow ............. Select next note up / Down
+
+	Right / Left arrow ................. Move selected Note right/ Left by Grid Division
+
+	Right / Left arrow ................. Move  Selection point by right/ Left with Grid Division
+
+	Up / Down........................... Move selected Note up and Down
+
+	Shift + Up / Down ...... Moves the selected notes up or down by an Octave
+
+	Shift + Right / Left ...... Moves the length of the selected note
+
+	CTRL + Shift + up / Down........ Select Notes up and down (In chord)
+
+
+Time Line Editor
+
+	CTRL + Right / Left Arrow ………Move to the Start / End of the Next / Prev Clip
+	
+	Shift + Right / Left ………………… Select the track Contents left / Right
+	
+	Up / Down ……………… Select Prev / Next track
+	
+	
+	
+Loop (While on the loop selector)
+
+	CTRL .....  Gives option to ad Start Loop marker
+
+	CTRL + Shift ......... Add End Loop marker
+	
+	Select content -> CTRL + L …………. Loop Content
+	
+	CTRL + Shift + L ……….. Select contents of all tracks inside Loop braces
+	
+	CMD SHIFT D…… 
+	
+	CMD SHIFT Delete ……
+	
+	
+Drum Rack
+	Adding two sounds/samples to the same note
+	
+	Drag one sample onto a note for second sample, press ALT and drag onto the same note 
+	

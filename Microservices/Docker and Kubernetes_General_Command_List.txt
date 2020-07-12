@@ -1,0 +1,132 @@
+Docker and Kubernetes
+
+
+git clone https://github.com/githubtraining/hellogitworld.git
+
+mvn clean install
+
+docker run hello-world
+
+kubectl run nginx --image=nginx
+
+kubectl create deployment hello-springboot --image=gazgeek/springboot-helloworld
+
+kubectl expose deployment hello-springboot --type=NodePort 
+
+
+https://confluence/display/RMA/atomIQ 
+
+==================================================
+
+Test IP -10.19.41.9  -Demoed ot Edureka
+
+
+9741983681 - Debasis Nayak
+
+============================================
+
+https://github.com/dstar55/docker-hello-world-spring-boot
+
+
+==============================
+Spring Docker Tutorial
+https://spring.io/guides/gs/spring-boot-docker/
+
+
+git clone https://github.com/spring-guides/gs-spring-boot-docker.git //tests git and integration with github 
+
+cd gs-spring-boot-docker
+
+cd complete
+
+mvn clean install  //tests Maven installation and integration with maven central
+
+cd target 
+
+java -jar gs-spring-boot-docker-0.1.0.jar //tests Java installation
+
+curl http://localhost:8080/
+
+docker build -t springio/gs-spring-boot-docker .  //pulls Image jdk-8-alpine, tests docker and integration with dockerhub 
+
+docker run -p 8080:8080 springio/gs-spring-boot-docker
+
+curl http://localhost:8080/
+
+kubectl create deployment hello-springboot --image=springio/gs-spring-boot-docker
+
+kubectl expose deployment hello-springboot --port=8080 --target-port=8080 --type=NodePort 
+
+kubectl expose deployment hello-springboot --port=8080 --target-port=8080
+
+kubectl port-forward svc/hello-springboot 9090:8080
+
+=======================================================
+
+export HTTP_PROXY=10.19.16.165:8080
+
+export HTTPS_PROXY=10.19.16.165:8080
+
+==============================================
+
+Freshers_Technical_ONB - AWS - 10.78.174.10
+
+Freshers_Technical_ONB - OnPrem - TRN9413 - 10.19.41.9, NEW on-Prem --- 
+
+======================================
+FROM openjdk:8-jdk-alpine
+RUN addgroup -S spring && adduser -S spring -G spring
+USER spring:spring
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
+ 
+ 
+=====================================
+
+install Kubernetes - Katacoda Spring Boot Demo
+
+curl -Lo /usr/local/bin/kubectl https://storage.googleapis.com/kubernetes-release/release/v1.15.3/bin/linux/amd64/kubectl && chmod +x /usr/local/bin/kubectl
+
+
+curl -Lo /usr/local/bin/kind https://github.com/kubernetes-sigs/kind/releases/download/v0.5.1/kind-linux-amd64 && chmod +x /usr/local/bin/kind
+
+
+mkdir -p ~/.kube && kind get kubeconfig > ~/.kube/config
+
+docker run -p 8080:8080 springguides/demo
+
+curl localhost:8080/actuator/health
+
+kubectl create deployment demo --image=springguides/demo --dry-run -o=yaml > deployment.yaml
+
+echo --- >> deployment.yaml
+
+kubectl create service clusterip demo --tcp=8080:8080 --dry-run -o=yaml >> deployment.yaml
+
+kubectl apply -f deployment.yaml
+
+kubectl get all
+
+kubectl port-forward svc/demo 8080:8080
+
+curl localhost:8080/actuator/health
+
+=======================================================
+
+kubectl delete deployments --all -n tektontutorial
+
+======================================================
+
+alias kg="kubectl get"
+
+============================
+
+Kubernetes Sanity
+
+kubectl version --short && \
+kubectl get componentstatus && \
+kubectl get nodes && \
+kubectl cluster-info
+
+

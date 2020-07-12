@@ -1,0 +1,202 @@
+Premiere Pro
+	Shift + + ....... Maximize tracks
+
+	Shift + - ....... Minimize tracks
+
+	- , X ........Zoom out
+
+	=, Z ......... Zoom In
+----------------------------------------------------Zoom / Scroll-------------------------------------------------------
+	Alt + Scroll (Over Track Content) - Zoom In / Out
+
+	Alt + Scroll (Over Track title) - Resize Track Height
+
+	Scroll (Over Track Content) ..... Seek forward Backward, Horizontal Scroll
+
+	CTRL + Scroll (Over Track Content) ..... Vertical Scroll
+-----------------------------------------------------------------------------------------------------------------------
+	Shift + D ... Apply default transition (Video)
+
+	Ctrl + Shift + D .... Apply default transition (Audio)
+
+	\ .....toggle Fit Entire Project to window
+
+	Up / Down Arrow ....... Jump the play head to previous / next edit and select the clip
+	
+		CTRL + Up ............ Select Next Clip 
+	
+		CTRL + D .............. Select next Clip at Marker
+		
+	right / left arrow ...... move next / previous frame
+
+	Increase height of track - Double click on the track on left side
+	
+	Double click in general area of track - Maximizes the Track
+	
+	Right Click on Image -> Set to frame size ----- Fit the image to the current resolution
+
+	Sequence -> Selection follows Play head ... selects the clip under the play head
+
+	~ ............................ Toggle Full screen 
+
+	Q............ works with the start of the clip, to trim the content
+
+	W........... shift all the clips ahead to the playhead, to trim the content in beginning
+
+	A, Shift + A, Shift : Switch between all track select options
+
+	R ....... Rate Stretch tool
+
+	G....... Gain Popup
+
+	D........... Select clip at current Time
+
+	M .......... Add Marker
+
+	K. ............ Split selected Clip at current timeline
+
+	Ctrl + K ....... Split all the clips at current timeline
+
+	CTRL + Down ......... select previous clip
+
+	M …….. Add Marker
+	
+		M Again ... Edit Marker Dialog
+
+	Shift + M ..... Go to Next Marker
+
+	Ctrl + Shift + M .... Go to previous Marker
+
+	Shift + K ...... Play by Preview Edit
+
+	Shift + 0 ........ Multi Camera Toggle
+
+	Alt + trim ...... trims only the video and not the linked Audio
+	
+	Alt + Drag a clip/effect : Copy the clip / effect (Ignored the linked audio / video while copying)
+
+	Ctrl + Drag a clip : Swap Positions (Leaves Gap)
+
+	CTRL + Alt + Drag clip ..... Swap Positions without leaving Gaps
+
+	Alt + Double click - Media pane -> opens contents in same dialog
+
+	ctrl + Double click -> opens items in a new window (Docked)
+
+	Ctrl + A...... Select all 
+
+	Ctrl + Shift + A .... Deselect All selection
+
+	Ctrl + Shift + X ..... remove in and Out points
+
+	Ctrl + R ...... Change the speed duration of clip (Use Optical flow)
+
+	Delete - To delete a clip
+
+	Shift + Delete.. .Ripple Delete... (deletes the clip and moves other clip to fill space)
+
+	Ctrl + O ..... Unlink Audio and Video
+
+	Alt + right / Left arrow ...... Move a Clip right or left
+
+	Alt + up / Down arrow .......... Move the clip Up or Down the tracks
+
+	Alt + Drag Clip .......... Duplicate the clip
+
+	CTRL + Z ....... Undo
+
+	CTRL + SHIFT + Z ......... Redo
+
+	CTRL + Double click MultiCam Sequence........... Open the MultiCam sequence for editing
+
+p============================================================
+
+ToolBar
+	
+	Selection Tool [V]
+		Trim / Select / Move
+		
+		Drag to select multiple Clips - Marquee Select
+
+		Alt + trim ...... trims only the video and not the linked Audio
+		
+		Alt + Drag a clip/effect : Copy thew clip / effect (Ignored the linked audio / video while copying)
+
+		Ctrl + Drag a clip : Swap Positions	(Drag Clip, Hold CTRL, let go of mouse at new position)
+
+		Razor Tool
+			Ctrl + K ..... cuts through all the clips if no clip is selected, only the selected clip if selected
+
+		Roll Edit
+			Ctrl + Move the intersection of clip
+
+	Track select Forwards
+		A - All Tracks Forward
+
+		Shift + A... All tracks BAckward
+
+		Shift ... Only single track clip selected
+
+		Shift + Alt ..... moves all videos on track without moving Audio / vice versa
+
+		CTRL + Shift + V ... INsert Paste
+
+		CTRL + V ........ OVerwrite Paste
+
+	Ripple [B] / Roll [N]..For Transitions
+		Ripple - Shorten or lengthen the clip and move other clips to fill gap
+				Clips the inpoint or outpoint of a clip without changing the adjacent clips
+				Used as MAtching Tool
+
+		Roll - Affects outpoint and Inpoint of ADJACENT clips simultaneously
+				USed to determine where the edit actually happens after the match
+
+
+	Rate Stretch Tool [R]
+		USe this to Fast forward and not much for Slow Motion
+
+	Razor Tool [C]
+		Through Edit Concept, join if they exist
+
+		Alt + Cut... . Only cuts the audio / Video and not the linked content
+
+		Shift + Cut .......Cuts all the clips on all Tracks
+
+	Slip Tool [Y] and Slide Tool [U]. For Clip Contentsy
+		Slip - Trims a single clips in and out point simultaneously while not affecting the adjacent clips
+
+		Slide - Opp of Slip Tool . Does not affest the single clip in and out points but adjusts the adjacent clips
+
+	Pen Tool [P]
+		Setting Opacity / Effect Level
+
+		Select Tool -> Ctrl Key.... used to add keyframes
+
+	Trim Window [Shift + T]
+		 GIve quick access to ripple and Roll Editing
+
+		 Use Up and Down arrow to jump to edits and press T
+
+		 Ctrl + Left / Right ... Move one frame
+
+		 Ctrl + SHift + Left / Right .... Move 5 Frames
+
+==========================================================
+
+Shift + 1 -> Project Monitor
+
+Shift + 2 -> Source Monitor
+
+Shift + 3 - > Timeline editor
+
+Shift + 4 -> Program Monitor
+
+Shift + 5 -> Effect Controls
+
+Shift + 6 -> Audio Controls
+
+Shift + 7 -> Effects
+
+Shift + 7 -> Media Browser
+
+=============================================================

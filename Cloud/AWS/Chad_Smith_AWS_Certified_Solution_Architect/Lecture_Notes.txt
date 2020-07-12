@@ -1,0 +1,4 @@
+Search  for whats new at aws on the AWS web sites
+
+Learn the concepts of the cloud architecture, that will help you adapt to the changes happening in the AWS services.
+

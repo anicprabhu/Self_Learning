@@ -1,0 +1,119 @@
+developers do not have 10 years of exerience, they have 1 year of exerience 10 times
+
+
+have a  broad understanding of the software
+
+have been long enough in a project to be aware of the consequences of the decisions taken'
+
+You cant be and dont have to be expert at everything, however fair idea of the technical frameworks is essential
+
+you dont have to answer to every questions, you need to know where to go to get the answer, thats the key
+
+Broad Technologist
+
+
+Technical Architect vs Solution Architect
+
+	Solution - Technically focussed, 
+
+
+The path to becoming an Architect is Varied
+
+deal with new challenges
+	Agendas
+	Budgets
+	Politics
+
+it is not what you think to be
+
+	work can span multple iteratoins
+
+	work on shifting cultures
+
+	bringing new transformations
+
+	no instant outputs
+
+	code less but still code, more of POC coding, insted of Pull a card from Backlog
+
+	Join Meetings, expected to lead
+
+	Change agents
+
+	You will have a lot more autonomy
+
+	Tends to be less task based
+
+	You might have to go to the work rather than waiting the work to come to you
+
+	Go Evaluate X vs Y type of tasks
+
+	more of governance role - 
+
+	Self Motivated insted of a PM telling you what to do
+
+	Time Management - get pulled in different directions, lot of ad hoc requests
+
+	be aware of Growth Oppurtunities - for something that your boss does not want to do
+
+	Visibility Matters in this role
+
+	Do your customers know what you are working today?
+
+	Technical Skill is assumed - Raises and Bonuses come for other reasons.
+
+	you need to solve a technical issue - hire an Engineer
+
+		Fixing a pipr Leak vs Fixing a waterproofing of full house
+
+	It isnt about tech skills anymore
+
+	Business + Technical + Communication + Leadership
+
+		How well do you know the Business Domain?
+
+		Do you have technical breadth and depth - T shaped
+
+			Breadth of Skills - expert on couple things - know who to ask for the things you do not know
+
+		How well you can communicate
+			
+			Most of us can talk to dev, coz we are Dev, but falter when talking to Business Guys
+			
+			How to alter the same message acording to the target audience
+
+		Lead yourself, direct and influence without authority
+
+		Leaders will be never as technical but will always have strong communicaion and Leadership skills
+
+		Take care of Educational oppurtunities
+
+		there is no Best solution, always a least worst solution. Always a balancing act.
+
+		What do you when there are no best practices, when you are implementing a new idea for the first time, only try and improve
+
+		How do we keep with our developers technically? we will never be able to keep up, buy we need to be technical enough to be respected, and have technical conversations with them, but they are the technical experts and that is OK
+
+		Have a habit for Learning, attend conferences, do POC, present webinars
+
+		Be able to translate requirements from a developer to architect
+
+	You spend more time communicating via meetings, chats and creating documents
+
+	51:00
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

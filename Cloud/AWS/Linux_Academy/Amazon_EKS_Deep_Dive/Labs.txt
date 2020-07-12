@@ -1,0 +1,318 @@
+EKS - Labs
+
+Welcome to this hands-on AWS lab! Today we're going to be deploying a new Elastic Container Service for Kubernetes (or EKS) cluster. Create the cluster with the appropriate `eksctl` command. Please read and understand the documentation here and discover the correct command line switches to deploy your EKS cluster in the `US-EAST-1` region using t2.medium instances. When you're done, join me in the next video, where we'll walk through this scenario in detail. Try not to refer to the walkthrough video first. Give it a try in the environment provided for you, and then join me in the next video. Good luck!
+
+======================================================================
+
+Creating an EKS Cluster in AWS
+Introduction
+
+In this hands-on AWS lab, we will create our own Elastic Container Service for Kubernetes (EKS) cluster. We will use the eksctl command line utility to create the VPC infrastructure, EKS cluster, and EKS worker nodes. We will then connect to the EKS cluster using the kubectl utility.
+Connecting to the Lab
+
+    Open your terminal application, and run the following command. (Remember to replace <PUBLIC_IP> with the public IP you were provided on the lab instructions page.)
+
+    ssh cloud_user@<PUBLIC_IP>;
+
+    Type yes at the prompt.
+    Enter your password at the prompt.
+
+Configure Your AWS CLI Credentials
+
+    Run the aws configure command.
+
+    aws configure
+
+    Enter your access key at the prompt.
+    Enter your secret access key at the prompt.
+    Specify the default region name.
+
+    us-east-1
+
+    Verify that the configuration was successful.
+
+    aws sts get-caller-identity
+
+Create a New EKS Cluster
+
+    Create the cluster.
+
+    eksctl create cluster --region=us-east-1 --node-type=t2.small
+
+    EKS cluster creation can take a long time to complete (depends on AWS's current load).
+
+Connect to the New EKS Cluster
+
+    Verify that the cluster configuration works.
+
+    kubectl get nodes
+
+Conclusion
+
+Congratulations, you've successfully completed this hands-on lab!
+
+===================================================================
+
+Deploying an Application to EKS
+Introduction
+
+Welcome to this hands-on AWS lab! In this lab, we will be deploying the nginx web server to an Elastic Container Service for Kubernetes (EKS) cluster.
+Connecting to the Lab
+
+    Open your terminal application, and run the following command. (Remember to replace <PUBLIC_IP> with the public IP you were provided on the lab instructions page.)
+
+    ssh cloud_user@<PUBLIC_IP>;
+
+    Type yes at the prompt.
+    Enter your password at the prompt.
+
+Clone the GitHub Repository
+
+    Install Git.
+
+    sudo yum install git
+
+    Clone the repository.
+
+    git clone https://github.com/linuxacademy/eks-deep-dive-2019.github
+
+    Change to the eks-deep-dive-2019 directory.
+
+    cd eks-deep-dive-2019/
+
+    Change to the 2-LA1-Deploying-an-Application-to-EKS directory.
+
+    cd 2-LA1-Deploying-an-Application-to-EKS
+
+    List the contents of the directory.
+
+    ll
+
+    List the contents of the directory.
+
+    ls -la
+
+Create the Deployment
+
+    Examine the deployment.yaml file.
+
+    vim deployment.yaml
+
+    Exit the vim text editor.
+    Create the deployment.
+
+    kubectl apply -f deployment.yaml
+
+     Check the status of the deployment.
+
+    kubectl get deployment nginx
+
+    kubectl get pods
+
+    kubectl exec -it <POD_ID> -- /bin/bash
+
+Create the Service
+
+    Examine the service.yaml file.
+
+    vim service.yaml
+
+    Exit the vi text editor.
+    Create the service.
+
+    kubectl apply -f service.yaml
+
+Browse to the ELB's Public DNS Name
+
+    Check the status of the service.
+
+    kubectl get service nginx -o wide
+
+    Test the connectivity.
+
+    kubectl get service nginx -o json
+
+    Install the jq JSON processor.
+
+    sudo yum install jq
+
+    Retrieve the DNS name of the ELB.
+
+    kubectl get service nginx -o json | jq -r '.status.loadBalancer.ingress[].hostname'
+
+    Assign the DNS name to a variable called ELB.
+
+    ELB=$(kubectl get service nginx -o json | jq -r '.status.loadBalancer.ingress[].hostname')
+    echo $ELB
+
+    Run a curl request.
+
+    curl -m3 -v $ELB
+
+    Open a new tab in your web browser, and paste the DNS name into the address bar. Press Enter to load the page.
+    You shoud see a "Welcome to Nginx!" message on the web page.
+    Undeploy the application.
+
+    kubectl delete -f service.yaml
+    kubectl delete -f deployment.yaml
+
+Conclusion
+
+Congratulations, you've successfully completed this hands-on lab!
+
+
+==============================================================================
+
+
+Welcome to this hands-on lab! Today we're going to be deploying the Cluster Autoscaler to an Elastic Container Service for Kubernetes (or EKS) cluster. The Cluster Autoscaler is a default Kubernetes component that can scale either pods or nodes in a cluster. It automatically increases the size of an Auto Scaling group so that pods can continue to get placed successfully. It also tries to remove unused worker nodes (ones with no pods running) from the autoscaling group. In order to successfully complete this lab, you'll need to perform a few tasks: 1. First, you'll need to SSH into the EC2 instance provisioned for you using the credentials provided. 2. In your home directory, you'll find Kubernetes deployment and service configuration files. Use these files to deploy the cluster autoscaler as well as an nginx web server which you'll scale out. 3. Once you've deployed the cluster autoscaler and scaled the nginx deployment, you can observe additional EC2 instances being launched to accommodate the workload. 
+
+
+
+
+
+
+
+
+
+================================================================
+
+
+Learning Objectives
+
+Introduction
+
+CloudTrail is one of the primary services that we use in AWS for logging purposes. At a high level, CloudTrail logs any API calls that are made to the account, in the console, the command line, or the AWS SDK, which all use these APIs. Essentially any action that you perform against an AWS account is logged by CloudTrail. In order to successfully complete this learning activity, you'll need to perform a few tasks: - First, you'll need to create a trail in CloudTrail, storing logs in a new S3 bucket. - Next, you will create an EKS cluster using the AWS Management Console. - Then you'll view the CloudTrail Event History to see that the EKS CreateCluster event has registered. - Finally, you'll locate the log file in S3 which contains these events. 
+
+
+Additional Information and Resources
+
+Log into the AWS Management Console, making sure you are in US-EAST-1.
+
+Create a new CloudTrail trail, logging all events to a new S3 bucket of your choice.
+
+Create a new EKS cluster.
+
+After around 15 minutes, find your EKS CreateCluster API action in the CloudTrail Event History.
+
+Finally, find the CloudTrail log file in S3 containing this AWS API action.
+
+
+
+
+Create a CloudTrail trail.
+
+    In the AWS Management Console, navigate to CloudTrail.
+
+    Choose Trails, and then choose Create trail.
+
+    On the Create trail page, for Trail name, type a name for your trail.
+
+    For Apply trail to all regions, choose Yes to receive log files from all regions.
+
+    For Management events, choose All, and then choose Save.
+
+    For Data events, you can specify logging data events for Amazon S3 buckets, for AWS Lambda functions, or both. By default, trails don't log data events. You can skip this section in this learning activity.
+
+    For Storage location, in Create a new S3 bucket, choose Yes to create a bucket. When you create a bucket, CloudTrail creates and applies the required bucket policies.
+
+    Note:
+    If you chose No, choose an existing S3 bucket. The bucket policy must grant CloudTrail permission to write to it.
+
+    For S3 bucket, type a name for the bucket you want to designate for log file storage. The name must be globally unique.
+
+    Choose Create.
+
+    The new trail appears on the Trails page. The Trails page shows the trails in your account from all regions. In about 15 minutes, CloudTrail publishes log files that show the AWS API calls made in your account. You can see the log files in the S3 bucket that you specified.
+
+    Note:
+    You can't rename a trail after it has been created. Instead, you can delete the trail and create a new one.
+
+    
+Create a new EKS cluster.
+
+    Navigate to EKS.
+    Choose Create Cluster.
+    Enter a cluster name.
+    Select the predefined role name.
+    Select the predefined VPC. The subnets in this VPC should auto-populate.
+    Select the security group for the EKS control plane.
+    Click Create.
+
+check_circle
+Find EKS CreateCluster API action in the CloudTrail Event History.
+
+    Navigate to CloudTrail > Event History
+    Wait about 15 minutes for CloudTrail to register the EKS CreateCluster API call.
+    Refresh the Event History to find the API call.
+    Expand to see details.
+
+check_circle
+Find the `CreateCluster` API call in the CloudTrail S3 bucket.
+
+    Navigate to the S3 bucket you created for the CloudTrail Trail.
+    Navigate the folder structure to the list of .gz log files.
+    Open each .gz file and locate the CreateCluster API call in the JSON data.
+
+============================================
+
+Capturing EKS API Calls with CloudTrail
+Introduction
+
+CloudTrail is one of the primary services for logging in AWS. CloudTrail logs every API call that is made to the account, the console, the command line, and the AWS SDK.
+
+CloudTrail is very important in security because it records every API call executed on our resources. We can also create trails that allow us to store logs longer than 90 days and then use them to trigger automation events. For security purposes, it is considered best practice to make sure CloudTrial logging is always enabled.
+
+In this hands-on AWS lab, we will:
+
+    Configure CloudTrail to capture key events and deliver log files to a specific S3 bucket
+    Generate AWS EKS API calls in order to verify that CloudTrail is working
+    Use the CloudTrail console to learn more about the events CloudTrail captures
+
+Log in to the AWS Management Console with the credentials provided on the lab instructions page. Make sure you are using the us-east-1 (N. Virginia) region.
+Create a CloudTrail Trail
+
+    In the AWS Management Console, navigate to the CloudTrail service.
+    Click Create Trail.
+    On the Create trail page, configure the following settings:
+        Trail name: EKS (or any name you like)
+        Apply trail to all regions: Yes
+        Read/write events: All
+        Create a new S3 bucket: Yes
+        S3 bucket: (Give the bucket a unique name.)
+    Click Create.
+    Click the name of the bucket we just created to open it.
+    At the top of the page, click Amazon S3.
+    On the S3 buckets page, click the name of our bucket to open it.
+    Click the AWSLogs folder to open it.
+    Click the folder named with your account number to open it.
+
+Create a New EKS Cluster
+
+    Navigate to the EKS service.
+    Under Create EKS cluster, enter a cluster name (e.g., "CloudTrail").
+    Click Next step.
+    On the Create cluster page, configure the following settings:
+        Role name: (Select the pre-provisioned role with ServiceRole in the name.)
+        VPC: (Select the pre-provisioned VPC from the dropdown.)
+            Note: The subnets should auto-populate.
+        Security groups: (Select the pre-provisioned security group with ControlPlaneSecurityGroup in the name.)
+    Click Create.
+
+Find the EKS CreateCluster API Action in the CloudTrail Event History
+
+    Navigate to the CloudTrail service.
+    Click Event history in the left sidebar.
+    Wait about 15 minutes for CloudTrail to register the EKS CreateCluster API call. (You may need to refresh the page for it to appear.)
+    Click the arrow on the left side of the CreateCluster row to see the event details.
+    Click View event.
+    Explore the JSON content under View Event, then click Close.
+
+Find the CreateCluster API Call in the CloudTrail S3 Bucket
+
+    Navigate to the S3 service.
+    In the CloudTrail bucket, click each folder name until you reach a list of .gz log files.
+    Open each .gz file and locate the CreateCluster API call in the JSON data.
+
+Conclusion
+
+Congratulations, you've successfully completed this hands-on lab!

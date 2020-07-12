@@ -1,8 +1,0 @@
-FE Code
-https://github.com/shaunwa/react-blog
-
-
-BE Code
-https://github.com/shaunwa/react-blog-backend
-
-

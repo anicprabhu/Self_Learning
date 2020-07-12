@@ -1,0 +1,60 @@
+Welcome to this hands-on AWS lab! Today we're going to be deploying a new Elastic Container Service for Kubernetes (or EKS) cluster. Create the cluster with the appropriate `eksctl` command. Please read and understand the documentation here and discover the correct command line switches to deploy your EKS cluster in the `US-EAST-1` region using t2.medium instances. When you're done, join me in the next video, where we'll walk through this scenario in detail. Try not to refer to the walkthrough video first. Give it a try in the environment provided for you, and then join me in the next video. Good luck!
+
+======================================================================
+
+Creating an EKS Cluster in AWS
+Introduction
+
+In this hands-on AWS lab, we will create our own Elastic Container Service for Kubernetes (EKS) cluster. We will use the eksctl command line utility to create the VPC infrastructure, EKS cluster, and EKS worker nodes. We will then connect to the EKS cluster using the kubectl utility.
+Connecting to the Lab
+
+    Open your terminal application, and run the following command. (Remember to replace <PUBLIC_IP> with the public IP you were provided on the lab instructions page.)
+
+    ssh cloud_user@<PUBLIC_IP>;
+
+    Type yes at the prompt.
+    Enter your password at the prompt.
+
+Configure Your AWS CLI Credentials
+
+    Run the aws configure command.
+
+    aws configure
+
+    Enter your access key at the prompt.
+    Enter your secret access key at the prompt.
+    Specify the default region name.
+
+    us-east-1
+
+    Verify that the configuration was successful.
+
+    aws sts get-caller-identity
+
+Create a New EKS Cluster
+
+    Create the cluster.
+
+    eksctl create cluster --region=us-east-1 --node-type=t2.small
+
+    EKS cluster creation can take a long time to complete (depends on AWS's current load).
+
+Connect to the New EKS Cluster
+
+    Verify that the cluster configuration works.
+
+    kubectl get nodes
+
+Conclusion
+
+Congratulations, you've successfully completed this hands-on lab!
+
+===================================================================
+
+
+
+
+
+
+
+

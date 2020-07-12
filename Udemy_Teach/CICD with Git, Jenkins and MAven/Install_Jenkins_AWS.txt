@@ -1,0 +1,133 @@
+create EC2 instance
+
+Security Group = allow all the ports
+
+=========================================
+sudo yum update -y
+
+sudo yum install maven git -y
+
+	sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+
+	sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
+
+	sudo yum install jenkins -y
+
+	sudo service jenkins start
+
+	sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+=====================================================
+
+CI CD with Git Jenkins and Maven
+
+Install Plugin Maven, Build Pipeline Plugin
+
+Manage Jenkins -> Global Tool Configuration -> 
+
+											Update the JDK location (mvn --version)
+
+											Update the Maven Version
+
+Create a Pipeline Project
+
+	Build Trigger  - GitHub hook trigger for GITScm polling
+
+	Pipeline - Script from SCM
+
+	SCM Git - https://github.com/anicprabhu/SpringBootHelloworld.git
+
+	Run MAnual Build
+
+
+Auto Build from webhook
+
+	Add GitHub Plugin
+		Manage Jenkins -> Manage Plugins -> Github Integration
+
+
+	Manage Jenkins -> Configure System -> Published Jenkins URL-> 
+						http://ec2-100-25-30-176.compute-1.amazonaws.com:8080/github-webhook/
+
+
+	Go to -> Repository -> Fork -> https://github.com/anicprabhu/SpringBootHelloworld.git
+
+		Settings -> Webhooks -> 
+					PAyload URL - 	
+						http://ec2-100-25-30-176.compute-1.amazonaws.com:8080/github-webhook/
+					Content Type - 
+						Application JSON
+
+	GO to Github, Update a change 
+		See the updates Pipeline triggered
+
+
+======================================================
+
+Edureka Video
+
+Create a freestyle project - DevCompile
+
+	SCM -> Git -> Repo URL -> https://github.com/edureka-git/DevOpsClassCodes.git
+
+	Build -> Invoke Top Level Maven Target -> Clean Package
+
+	PostBuild Action -> Build Other Projects -> QATest
+
+
+Create one more project - QATest
+
+	Freestyle
+
+	SCM - https://github.com/edureka-git/DevOpsClassCodes.git
+
+	Build -> Invoke Top Level Maven Target -> Clean Package
+
+
+New View -> BuildPipelineView -> DevOpsPipeline 
+
+			Initial Job -> DevCompile
+
+			Execute the Build Pipeline
+
+
+=======================================================
+
+Install Jenkins on Kubernetes
+
+helm install cicd stable/jenkins --set rbac.create=true,master.servicePort=80,master.serviceType=LoadBalancer
+
+
+kubectl get pods -w
+
+
+export SERVICE_IP=$(kubectl get svc --namespace default cicd-jenkins --template "{{ range (index .status.loadBalancer.ingress 0) }}{{ . }}{{ end }}")
+
+echo http://$SERVICE_IP/login
+
+
+--username admin
+
+printf $(kubectl get secret --namespace default cicd-jenkins -o jsonpath="{.data.jenkins-admin-password}" | base64 --decode);echo
+
+helm uninstall cicd
+
+=========================================================
+
+Install Tomcat
+
+sudo yum install maven git -y
+wget https://downloads.apache.org/tomcat/tomcat-8/v8.5.57/bin/apache-tomcat-8.5.57.zip
+--wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.37/bin/apache-tomcat-9.0.37.zip
+unzip apache-tomcat-8.5.57.zip
+cd apache-tomcat-8.5.57/bin/
+chmod 700 ./*.sh
+./startup.sh
+
+
+
+
+
+
+
+

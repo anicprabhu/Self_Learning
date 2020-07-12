@@ -1,0 +1,8 @@
+Course Repository
+https://bitbucket.org/awsdevguru/awsdevassoc/src/master/
+
+
+Certified_Developer_Practice_Test
+https://learning.oreilly.com/certifications/9780135954768/
+
+

@@ -1,0 +1,33 @@
+Workshop
+https://www.eksworkshop.com/010_introduction/
+
+
+Documentation
+https://docs.aws.amazon.com/eks/index.html
+
+AWS Whitepapers
+https://aws.amazon.com/whitepapers/?whitepapers&whitepapers-main.sort-by=item.additionalFields.sortDate&whitepapers-main.sort-order=desc
+
+
+AWS Digital Training
+https://aws.amazon.com/training/course-descriptions/?nc2=sb_tr_to
+
+https://www.aws.training/LearningLibrary?filters=language%3A1&tab=digital_courses
+
+
+AWS Getting Started
+https://aws.amazon.com/getting-started/?nc2=h_ql_le_gs
+
+
+AWS Hands On Tutorial
+https://aws.amazon.com/getting-started/hands-on/?awsf.getting-started-content-type=*all&awsm.page-getting-started-all=1
+
+
+AWS DevOps
+https://aws.amazon.com/getting-started/hands-on/devops/
+
+
+
+
+
+

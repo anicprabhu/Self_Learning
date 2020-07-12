@@ -1,0 +1,12 @@
+https://tanzu.vmware.com/content/blog/should-that-be-a-microservice-keep-these-six-factors-in-mind
+
+
+https://tanzu.vmware.com/content/ebooks/thinking-architecturally
+
+
+https://www.thoughtworks.com/radar/techniques/lightweight-architecture-decision-records
+
+http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions
+
+http://nealford.com/katas/list.html
+

@@ -1,0 +1,6 @@
+Course GitHub
+https://github.com/bmuschko/ckad-crash-course/blob/master/prerequisites/instructions.md
+
+Course Exercises
+https://github.com/bmuschko/ckad-crash-course/tree/master/exercises
+

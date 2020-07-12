@@ -1,0 +1,12 @@
+Serum
+
+ALT+Shift + Click --- Change Polarity of click
+
+ALT + Click LFO… Move points in Sync + Quantized to the Grid
+
+Shift+ Click LFO….. Pencil Draw Mode
+
+ALT + SHIFT + Click LFO … Draw Mode + Quantize 
+
+CTRL + Click LFO ….. Select adjacent two vertical points
+
